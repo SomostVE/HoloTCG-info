@@ -14,3 +14,5 @@
 
 ## Support Cards
 - Provide additional effects during the Main Step to aid your Holomen.
+
+[← Previous](previous-page.md) | [Home](index.md) | [Next →](next-page.md)
