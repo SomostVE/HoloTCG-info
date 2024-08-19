@@ -10,3 +10,5 @@
 
 ## Magic: The Gathering
 - **Untap/Reset Step**: Similar to MTG's untap phase, where you prepare your Holomen for the next actions.
+
+[← Previous](previous-page.md) | [Home](index.md) | [Next →](next-page.md)
