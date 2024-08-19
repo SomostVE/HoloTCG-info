@@ -1,0 +1,11 @@
+title: "Hololive TCG Wiki"
+description: "A comprehensive guide to the Hololive Official Card Game."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://somostve.github.io/hololive-tcg-guide" # your GitHub Pages URL
+theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
