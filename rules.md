@@ -16,3 +16,5 @@ The game is played in a series of turns, each consisting of the following steps:
 - Reduce your opponent's Life Points to zero.
 - Eliminate all of your opponent’s Holomen except their Oshi Holomen.
 - Deck-out: If your opponent can't draw a card at the start of their turn, you win.
+
+[← Previous](previous-page.md) | [Home](index.md) | [Next →](next-page.md)
