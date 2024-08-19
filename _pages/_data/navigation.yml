@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Rules"
+    url: /rules/
+  - title: "Card Types"
+    url: /cards/
+  - title: "Turn Structure"
+    url: /turn-structure/
+  - title: "Comparison"
+    url: /comparison/
