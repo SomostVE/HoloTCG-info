@@ -19,3 +19,5 @@ Each turn in the Hololive TCG consists of the following steps:
 
 ## End Step
 - End your turn, allowing your opponent to take theirs.
+
+[← Previous](previous-page.md) | [Home](index.md) | [Next →](next-page.md)
