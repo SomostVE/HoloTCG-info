@@ -1,9 +1,3 @@
----
-title: "Comparison with Other TCGs"
-layout: single
-permalink: /comparison/
----
-
 # Comparison with Other TCGs
 
 The Hololive Official Card Game shares similarities with several popular trading card games, while also introducing unique mechanics that set it apart. Here's a comparison with some of the most well-known TCGs:
@@ -18,7 +12,3 @@ The Hololive Official Card Game shares similarities with several popular trading
 
 ## Magic: The Gathering
 - **Untap/Reset Step**: The Reset Step in the Hololive TCG is similar to Magic: The Gathering's Untap Step. In this phase, players prepare their Holomen for the next turn by reactivating any that were used (rested) in the previous turn. This mechanic ensures that all cards are ready for action at the start of each turn, similar to how MTG handles card readiness.
-
----
-
-[← Previous](previous-page.md) | [Home](index.md) | [Next →](next-page.md)
