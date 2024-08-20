@@ -27,13 +27,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Fetch and load the markdown content
       fetch(target)
-        .then(response => response.text())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to fetch ${target}`);
+          }
+          return response.text();
+        })
         .then(text => {
           content.innerHTML = marked.parse(text);
+        })
+        .catch(error => {
+          content.innerHTML = `<p>Error loading content: ${error.message}</p>`;
         });
     });
   });
 
   // Load the home page content by default
-  document.querySelector('.menu-item a').click();
+  if (menuItems.length > 0) {
+    menuItems[0].click();
+  }
 });
