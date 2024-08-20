@@ -180,6 +180,18 @@ a:hover {
     justify-content: flex-end;
   }
 
+  .menu-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
   main {
     padding: 15px;
   }
