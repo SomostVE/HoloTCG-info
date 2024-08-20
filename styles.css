@@ -36,7 +36,7 @@ body.dark-mode {
 }
 
 .sidebar {
-  width: 220px;
+  width: 200px;
   background-color: var(--sidebar-background);
   padding: 20px;
   transition: all 0.3s;
@@ -49,6 +49,7 @@ body.dark-mode {
   list-style: none;
   padding: 0;
   width: 100%;
+  margin-top: 20px;
 }
 
 .sidebar .menu-item {
@@ -62,17 +63,14 @@ body.dark-mode {
   padding: 10px;
   display: block;
   width: 100%;
-  text-align: center;
+  text-align: left;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-.sidebar .menu-item a:hover {
-  background-color: var(--menu-background-hover);
-}
-
+.sidebar .menu-item a:hover,
 .sidebar .menu-item.active a {
-  background-color: var(--menu-background-active);
+  background-color: var(--menu-background-hover);
   color: var(--highlight-color);
 }
 
@@ -83,6 +81,7 @@ body.dark-mode {
   cursor: pointer;
   outline: none;
   padding: 10px;
+  align-self: flex-start; /* Aligns the button at the top-left */
 }
 
 .theme-toggle img {
