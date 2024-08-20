@@ -8,14 +8,23 @@
 </head>
 <body>
   <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'Hololive TCG Wiki',
-      repo: '',
-      loadSidebar: true,  // Ensure this is set to true
-      subMaxLevel: 2       // Set the maximum depth of subheadings in the sidebar
-    }
-  </script>
+<script>
+  window.$docsify = {
+    name: 'Hololive TCG Wiki',
+    repo: '',
+    loadSidebar: true,
+    subMaxLevel: 2,
+    sidebar: [
+      "* [Home](/)",
+      "* [Game Overview](README.md#game-overview)",
+      "* [Card Types](cards.md)",
+      "* [Turn Structure](turn-structure.md)",
+      "* [Game Rules](rules.md)",
+      "* [Comparison with Other TCGs](comparison.md)"
+    ]
+  }
+</script>
+
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
 </html>
