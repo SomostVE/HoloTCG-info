@@ -42,7 +42,7 @@ body.dark-mode {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Align items to the start to prevent horizontal layout */
   height: 100%; /* Ensures the sidebar takes full height */
 }
 
