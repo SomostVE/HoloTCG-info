@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
             body.classList.remove("light-mode");
             body.classList.add("dark-mode");
             themeIcon.src = "assets/moon-icon.png";
+            console.log("Switched to dark mode");
         } else {
             body.classList.remove("dark-mode");
             body.classList.add("light-mode");
             themeIcon.src = "assets/sun-icon.png";
+            console.log("Switched to light mode");
         }
     });
 
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", function (e) {
             e.preventDefault();
             const target = item.getAttribute("data-target");
+            console.log(`Fetching content from ${target}`);
 
             fetch(target)
                 .then(response => {
@@ -35,18 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
                 .then(text => {
                     content.innerHTML = marked.parse(text);
+                    console.log(`Loaded content from ${target}`);
 
                     // Smooth scroll to section if it's a submenu item
                     if (item.classList.contains('submenu-item')) {
                         const sectionId = item.getAttribute("href").substring(1);
                         const section = document.getElementById(sectionId);
                         if (section) {
+                            console.log(`Scrolling to section ${sectionId}`);
                             section.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                            console.warn(`Section with ID ${sectionId} not found`);
                         }
                     }
                 })
                 .catch(error => {
                     content.innerHTML = `<p>Error loading content: ${error.message}</p>`;
+                    console.error(error);
                 });
 
             // Set the clicked menu item as active
@@ -57,11 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load the homepage content by default
     if (menuItems.length > 0) {
+        console.log("Loading default content");
         menuItems[0].click();
     }
 
     // Mobile menu toggle functionality
     menuToggle.addEventListener('click', function () {
         sidebar.classList.toggle('show');
+        console.log("Toggled sidebar visibility");
     });
 });
