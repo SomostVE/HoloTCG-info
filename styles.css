@@ -7,6 +7,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   display: flex;
+  overflow-y: hidden; /* Prevents the second scrollbar */
 }
 
 :root {
@@ -15,6 +16,8 @@ body {
   --sidebar-background: #f4f4f4;
   --sidebar-text-color: #000000;
   --highlight-color: #007bff;
+  --link-color: #0056b3;
+  --link-hover-color: #00376f;
   --menu-background-hover: #dddddd;
   --menu-background-active: #cccccc;
 }
@@ -25,13 +28,15 @@ body.dark-mode {
   --sidebar-background: #333333;
   --sidebar-text-color: #ffffff;
   --highlight-color: #1e90ff;
+  --link-color: #4aa3ff;
+  --link-hover-color: #1a6bb3;
   --menu-background-hover: #555555;
   --menu-background-active: #444444;
 }
 
 .container {
   display: flex;
-  height: 100vh; /* Ensures the container is full height */
+  height: 100vh;
   width: 100%;
 }
 
@@ -42,8 +47,9 @@ body.dark-mode {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start to prevent horizontal layout */
-  height: 100%; /* Ensures the sidebar takes full height */
+  align-items: flex-start;
+  height: 100%;
+  overflow-y: auto; /* Ensures sidebar is scrollable if content exceeds height */
 }
 
 .sidebar ul {
@@ -75,6 +81,10 @@ body.dark-mode {
   color: var(--highlight-color);
 }
 
+.sidebar .submenu-item {
+  margin-left: 15px;
+}
+
 .theme-toggle {
   background: none;
   border: none;
@@ -82,7 +92,7 @@ body.dark-mode {
   cursor: pointer;
   outline: none;
   padding: 10px;
-  align-self: flex-start; /* Aligns the button at the top-left */
+  align-self: flex-start;
 }
 
 .theme-toggle img {
@@ -104,4 +114,14 @@ main {
 
 section {
   margin-bottom: 40px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
