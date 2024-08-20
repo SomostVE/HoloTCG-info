@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeIcon = document.getElementById("theme-icon");
   const menuItems = document.querySelectorAll(".menu-item a, .submenu-item a");
   const content = document.getElementById("markdown-content");
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  const mainContent = document.querySelector('main');
 
   themeToggleButton.addEventListener("click", function () {
     if (body.classList.contains("light-mode")) {
@@ -56,15 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
   if (menuItems.length > 0) {
     menuItems[0].click();
   }
-});
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const sidebar = document.querySelector('.sidebar');
-  const mainContent = document.querySelector('.main-content');
 
+  // Handle menu toggle for mobile view
   menuToggle.addEventListener('click', function() {
     sidebar.classList.toggle('show');
     mainContent.classList.toggle('expanded');
   });
-});
 
+  // Close the sidebar when clicking outside of it (for mobile)
+  document.addEventListener('click', function(e) {
+    if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+      sidebar.classList.remove('show');
+      mainContent.classList.remove('expanded');
+    }
+  });
+});
