@@ -3,11 +3,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
   background-color: var(--background-color);
   color: var(--text-color);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  min-height: 100vh;
 }
 
 :root {
@@ -36,9 +36,8 @@ body.dark-mode {
 
 .container {
   display: flex;
-  height: 100vh;
-  width: 100%;
   flex-direction: row;
+  width: 100%;
 }
 
 .sidebar {
@@ -49,9 +48,12 @@ body.dark-mode {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
-  overflow-y: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: 10;
+  overflow-y: auto;
 }
 
 .sidebar-header {
@@ -133,6 +135,7 @@ body.dark-mode {
 main {
   flex-grow: 1;
   padding: 20px;
+  margin-left: 220px; /* Ensure content is visible beside the sidebar */
   overflow-y: auto;
 }
 
@@ -176,23 +179,8 @@ a:hover {
     transform: translateY(0);
   }
 
-  .sidebar-header {
-    justify-content: flex-end;
-  }
-
-  .menu-toggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-
-  .theme-toggle {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-  }
-
   main {
+    margin-left: 0;
     padding: 15px;
   }
 
