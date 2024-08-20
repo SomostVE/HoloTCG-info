@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hololive TCG Wiki</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div id="app"></div>
-<script>
-  window.$docsify = {
-    name: 'Hololive TCG Wiki',
-    repo: '',
-    loadSidebar: true,
-    subMaxLevel: 2,
-    sidebar: [
-      "* [Home](/)",
-      "* [Game Overview](README.md#game-overview)",
-      "* [Card Types](cards.md)",
-      "* [Turn Structure](turn-structure.md)",
-      "* [Game Rules](rules.md)",
-      "* [Comparison with Other TCGs](comparison.md)"
-    ]
-  }
-</script>
+<body class="light-mode">
+  <header>
+    <button id="theme-toggle">Switch to Dark Mode</button>
+  </header>
 
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <div class="container">
+    <nav id="sidebar" class="sidebar">
+      <ul>
+        <li class="menu-item"><a href="#home">Home</a></li>
+        <li class="menu-item"><a href="#game-overview">Game Overview</a></li>
+        <li class="menu-item"><a href="#card-types">Card Types</a></li>
+        <li class="menu-item"><a href="#turn-structure">Turn Structure</a></li>
+        <li class="menu-item"><a href="#game-rules">Game Rules</a></li>
+        <li class="menu-item"><a href="#comparisons">Comparisons with Other TCGs</a></li>
+      </ul>
+    </nav>
+
+    <main id="content">
+      <section id="home">
+        <h1>Hololive Official Card Game Wiki</h1>
+        <p>Welcome to the Hololive Official Card Game Wiki! This is your go-to resource for everything related to the Hololive TCG...</p>
+      </section>
+
+      <!-- Add more sections here with the corresponding IDs -->
+    </main>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
