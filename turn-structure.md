@@ -39,3 +39,5 @@ Understanding the turn structure in the Hololive Official Card Game is crucial f
 - **Actions**:
   - Resolve any end-of-turn effects that may be active.
   - Declare the end of your turn, passing play to your opponent.
+
+[Back to Contents](index.md#contents)
