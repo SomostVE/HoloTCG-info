@@ -22,3 +22,4 @@ The Hololive Official Card Game features several types of cards, each playing a 
 - **Single Use**: Typically, Support Cards are played from your hand and are used once during your turn. After use, they are sent to the Archive, similar to a discard pile.
 - **Critical Timing**: Knowing when to play a Support Card is crucial, as they can provide the necessary boost to secure a win or defend against an opponent's strategy.
 
+[Back to Contents](index.md#contents)
