@@ -7,32 +7,29 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="light-mode">
-  <header>
-    <button id="theme-toggle">Switch to Dark Mode</button>
-  </header>
-
   <div class="container">
     <nav id="sidebar" class="sidebar">
+      <button id="theme-toggle" class="theme-toggle">
+        <img src="assets/sun-icon.png" id="theme-icon" alt="Switch Theme">
+      </button>
       <ul>
-        <li class="menu-item"><a href="#home">Home</a></li>
-        <li class="menu-item"><a href="#game-overview">Game Overview</a></li>
-        <li class="menu-item"><a href="#card-types">Card Types</a></li>
-        <li class="menu-item"><a href="#turn-structure">Turn Structure</a></li>
-        <li class="menu-item"><a href="#game-rules">Game Rules</a></li>
-        <li class="menu-item"><a href="#comparisons">Comparisons with Other TCGs</a></li>
+        <li class="menu-item"><a href="#" data-target="home.md">Home</a></li>
+        <li class="menu-item"><a href="#" data-target="game-overview.md">Game Overview</a></li>
+        <li class="menu-item"><a href="#" data-target="card-types.md">Card Types</a></li>
+        <li class="menu-item"><a href="#" data-target="turn-structure.md">Turn Structure</a></li>
+        <li class="menu-item"><a href="#" data-target="game-rules.md">Game Rules</a></li>
+        <li class="menu-item"><a href="#" data-target="comparisons.md">Comparisons with Other TCGs</a></li>
       </ul>
     </nav>
 
     <main id="content">
-      <section id="home">
-        <h1>Hololive Official Card Game Wiki</h1>
-        <p>Welcome to the Hololive Official Card Game Wiki! This is your go-to resource for everything related to the Hololive TCG...</p>
+      <section id="markdown-content">
+        <!-- Markdown content will be loaded here -->
       </section>
-
-      <!-- Add more sections here with the corresponding IDs -->
     </main>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
